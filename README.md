@@ -23,11 +23,13 @@ cp init.vim ~/.config/nvim/
 | ---- | ---- |
 |  Ctrl+e  |  open and close tree  |
 
-### fzf/ripgrep
+#### fzf/ripgrep
 |  コマンド  |  動作  |
 | ---- | ---- |
 |  fz  |  ファイル名であいまい検索  |
 |  rg  |  全検索  |
+
+---
 
 ### cui
 |  コマンド  |  動作  |
