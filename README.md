@@ -7,6 +7,7 @@ brew install neovim
 brew install maven
 brew install nodebrew
 brew install pyenv
+brew install mysql@5.7
 
 cd pc_setting
 cp .zshrc ~/
