@@ -19,6 +19,11 @@ cp init.vim ~/.config/nvim/
 
 ## Original key bind
 ### Neovim
+#### easy-motion
+|  コマンド  |  動作  |
+| ---- | ---- |
+|  s (任意の２文字)  |  割り当てられたキーバインドで移動  |
+
 #### NERDTree
 |  コマンド  |  動作  |
 | ---- | ---- |
