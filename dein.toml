@@ -1,0 +1,64 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  let g:deoplete#auto_completion_start_length = 1
+'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+  let g:EasyMotion_do_mapping = 0 "Disable default mappings
+  nmap s <Plug>(easymotion-s2)
+'''
+
+[[plugins]] #ファイルオープンを便利に
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  " ファイルを開いたらNERDTreeを閉じる
+  let g:NERDTreeQuitOnOpen=1
+  " 隠しファイルを表示
+  let g:NERDTreeShowHidden=1
+  " 非表示ファイル
+  let g:NERDTreeIgnore=['\.idea$', '\.clean$', '\.swp$', '\.bak$', '\~$']
+  
+  map <silent><C-e> :NERDTreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+  colorscheme iceberg
+'''
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+
+
+[[plugins]]
+repo = 'fatih/vim-go'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build_on = '''
+./install -all
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+  map <silent> fz :Files
+  map <silent> rg :Rg
+  let g:fzf_layout = { 'up': '~40%' }
+  command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+  command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
+      \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
+'''
+
