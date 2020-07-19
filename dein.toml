@@ -40,12 +40,17 @@ repo = 'dense-analysis/ale'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+hook_add = '''
+  " 保存時チェック
+  let g:go_metalinter_autosave = 1
+  let g:go_fmt_command = "goimports"
+  map <silent> <C-b> :GoDef <Enter>
+'''
 
 [[plugins]]
 repo = 'junegunn/fzf'
-build_on = '''
-./install -all
-'''
+build = './install --bin'
+merged = '0'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
@@ -62,3 +67,16 @@ hook_add = '''
       \   fzf#vim#with_preview({'options': '--exact --reverse'}, 'right:50%:wrap'))
 '''
 
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+build = 'bash install.sh'
+rev = 'next'
+hook_add = '''
+  set hidden
+  let g:LanguageClient_serverCommands = {
+      \ 'go': ['gopls']
+      \ }
+  let g:LanguageClient_loadSettings = 1
+  nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+'''

@@ -55,6 +55,11 @@ set cursorline                                                  " カーソル�
 set expandtab                                                   " tabを複数のspaceに置き換え
 set tabstop=2                                                   " tabは半角2文字
 set shiftwidth=2                                                " tabの幅
+if expand("%:t") =~ ".*\.go"                                    " .goファイル用
+  set noexpandtab
+  set tabstop=4
+  set shiftwidth=4
+endif
 
 " 不可視文字を表示
 set clipboard+=unnamed
