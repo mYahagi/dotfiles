@@ -10,15 +10,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export GOPATH=$HOME/go
-export GO111MODULE=auto
 export XDG_BASE_HOME='~/.config'
-export PATH=$PATH:$GOPATH/bin
-export PATH="$GOENV_ROOT/bin:$PATH"
-export GOENV_ROOT="$HOME/.goenv"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin/$PATH"
-export PATH="$PATH:$GOPATH/bin"
 
 alias nvimf='nvim $(fzf)'
 fd() {
@@ -27,3 +19,7 @@ fd() {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
+export PATH="$PATH:/usr/local/go/bin"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
