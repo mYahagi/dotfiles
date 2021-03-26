@@ -14,6 +14,11 @@ export GOPATH=$HOME/go
 export GO111MODULE=auto
 export XDG_BASE_HOME='~/.config'
 export PATH=$PATH:$GOPATH/bin
+export PATH="$GOENV_ROOT/bin:$PATH"
+export GOENV_ROOT="$HOME/.goenv"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin/$PATH"
+export PATH="$PATH:$GOPATH/bin"
 
 alias nvimf='nvim $(fzf)'
 fd() {
