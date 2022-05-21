@@ -3,7 +3,6 @@ MacのPythonを3系に向けるの、いつも忘れるけど[ここ](https://pr
 
 ## prepare
 ```shell
-git clone https://github.com/mYahagi/dotfiles.git
 brew install neovim
 brew install maven
 brew install nodebrew
@@ -12,12 +11,8 @@ brew install mysql@5.7
 brew install fzf
 brew install ripgrep
 
-cd dotfiles
-cp .zshrc ~/
-source ~/.zshrc
-
-cp dein.toml ~/.config/nvim/
-cp init.vim ~/.config/nvim/
+mkdir ~/app && cd ~/app
+./install.sh
 ```
 
 ## Original key bind
