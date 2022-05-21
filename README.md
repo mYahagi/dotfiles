@@ -3,7 +3,7 @@ MacのPythonを3系に向けるの、いつも忘れるけど[ここ](https://pr
 
 ## prepare
 ```shell
-git clone https://github.com/mYahagi/pc_setting.git
+git clone https://github.com/mYahagi/dotfiles.git
 brew install neovim
 brew install maven
 brew install nodebrew
