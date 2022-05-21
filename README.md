@@ -12,7 +12,7 @@ brew install mysql@5.7
 brew install fzf
 brew install ripgrep
 
-cd pc_setting
+cd dotfiles
 cp .zshrc ~/
 source ~/.zshrc
 
