@@ -12,7 +12,9 @@ brew install fzf
 brew install ripgrep
 
 mkdir ~/app && cd ~/app
-./install.sh
+git clone https://github.com/mYahagi/dotfiles.git
+
+./dotfiles/install.sh
 ```
 
 ## Original key bind
