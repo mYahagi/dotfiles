@@ -1,4 +1,5 @@
 export EDITOR=vim
+alias vim='nvim'
 export XDG_BASE_HOME='~/.config'
 export PATH=$PATH:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
