@@ -10,6 +10,7 @@ brew install pyenv
 brew install mysql@5.7
 brew install fzf
 brew install ripgrep
+brew install gh
 
 mkdir ~/app && cd ~/app
 git clone https://github.com/mYahagi/dotfiles.git
