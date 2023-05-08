@@ -1,4 +1,4 @@
-# my_pc_setting
+# setting
 MacのPythonを3系に向けるの、いつも忘れるけど[ここ](https://prog-8.com/docs/python-env)通りに設定すると安心
 
 ## prepare
@@ -16,6 +16,10 @@ mkdir ~/app && cd ~/app
 git clone https://github.com/mYahagi/dotfiles.git
 
 ./dotfiles/install.sh
+
+# install dein
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh)"
+sh installer.sh
 ```
 
 ## Original key bind
