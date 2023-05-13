@@ -1,6 +1,4 @@
 # setting
-MacのPythonを3系に向けるの、いつも忘れるけど[ここ](https://prog-8.com/docs/python-env)通りに設定すると安心
-
 ## prepare
 ```shell
 brew install neovim
