@@ -1,4 +1,4 @@
-let g:python3_host_prog = expand('~/.pyenv/shims/python')
+let g:python3_host_prog = system('echo -n $(which python3)')
 
 " ------------------------------------------------------------
 "  key bind
