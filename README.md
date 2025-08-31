@@ -2,14 +2,9 @@
 ## prepare
 ```shell
 brew install neovim
-brew install maven
-brew install pyenv
-brew install mysql@5.7
 brew install fzf
 brew install ripgrep
 brew install gh
-
-curl https://get.volta.sh | bash
 
 mkdir ~/app && cd ~/app
 git clone https://github.com/mYahagi/dotfiles.git
