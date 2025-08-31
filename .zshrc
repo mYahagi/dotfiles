@@ -8,18 +8,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(gh completion -s zsh)"
 eval "$(direnv hook zsh)"
 
-# MySQL
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/mysql@5.7/include"
-
 # Ruby
 eval "$(rbenv init -)"
-
-# Python
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 alias nvimf='nvim $(fzf)'
 fd() {
