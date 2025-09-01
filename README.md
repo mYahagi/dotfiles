@@ -16,6 +16,9 @@ git clone https://github.com/mYahagi/dotfiles.git
 pyenv install --list
 pyenv install 3.xx.x
 
+# install Deno (For ddc.vim)
+curl -fsSL https://deno.land/install.sh | sh
+
 # install dein
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh)"
 sh installer.sh
