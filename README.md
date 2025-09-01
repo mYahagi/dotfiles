@@ -5,6 +5,7 @@ brew install neovim
 brew install fzf
 brew install ripgrep
 brew install gh
+brew install pyenv
 
 mkdir ~/app && cd ~/app
 git clone https://github.com/mYahagi/dotfiles.git
