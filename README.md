@@ -12,6 +12,10 @@ git clone https://github.com/mYahagi/dotfiles.git
 
 ./dotfiles/install.sh
 
+# その時の最新のPythonを入れる
+pyenv install --list
+pyenv install 3.xx.x
+
 # install dein
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh)"
 sh installer.sh
