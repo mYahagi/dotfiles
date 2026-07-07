@@ -1,5 +1,3 @@
-let g:python3_host_prog = system('echo -n $(which python3)')
-
 " ------------------------------------------------------------
 "  key bind
 " ------------------------------------------------------------
@@ -10,15 +8,18 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Normal Mode
-cnoremap init :<C-u>edit $MYVIMRC<CR>                           " init.vim呼び出し
-noremap <Space>w :<C-u>w<CR>                                    " ファイル保存
+" init.vim呼び出し（:Init で開く）
+command! Init edit $MYVIMRC
+" ファイル保存
+noremap <Space>w :<C-u>w<CR>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " Insert Mode
-inoremap <silent> jj <ESC>:<C-u>w<CR>" InsertMode抜けて保存
+" InsertMode抜けて保存
+inoremap <silent> jj <ESC>:<C-u>w<CR>
 inoremap <silent> っｊ <ESC>
 inoremap <silent> っj  <ESC>
 inoremap <silent> ｊｊ <ESC>
@@ -55,25 +56,18 @@ set cursorline                                                  " カーソル�
 set expandtab                                                   " tabを複数のspaceに置き換え
 set tabstop=2                                                   " tabは半角2文字
 set shiftwidth=2                                                " tabの幅
-if expand("%:t") =~ ".*\.go"                                    " .goファイル用
-  set noexpandtab
-  set tabstop=4
-  set shiftwidth=4
-endif
+augroup go_indent                                               " .goファイル用
+  autocmd!
+  autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
+augroup END
 
-" 不可視文字を表示
-set clipboard+=unnamed
+" ヤンクとクリップボードを共有
 set clipboard=unnamed
-
-" シンタックスハイライト
-syntax enable
 
 " 括弧補完
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
-inoremap < <><LEFT>
 inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
 inoremap [ []<LEFT>
 
 "dein Scripts-----------------------------
