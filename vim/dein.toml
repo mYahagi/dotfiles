@@ -2,13 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-  let g:deoplete#auto_completion_start_length = 1
-'''
-
-[[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
   let g:EasyMotion_do_mapping = 0 "Disable default mappings
@@ -37,7 +30,6 @@ hook_add = '''
 [[plugins]]
 repo = 'dense-analysis/ale'
 
-
 [[plugins]]
 repo = 'fatih/vim-go'
 hook_add = '''
@@ -56,8 +48,8 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-  map <silent> fz :Files
-  map <silent> rg :Rg
+  nnoremap <silent> <Space>f :Files<CR>
+  nnoremap <silent> <Space>g :Rg<CR>
   let g:fzf_layout = { 'up': '~40%' }
   command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
