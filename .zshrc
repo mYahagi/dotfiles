@@ -8,9 +8,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(gh completion -s zsh)"
 eval "$(direnv hook zsh)"
 
-# Ruby
-eval "$(rbenv init -)"
-
 alias nvimf='nvim $(fzf)'
 fd() {
   local dir
