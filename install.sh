@@ -1,8 +1,7 @@
 DOT_DIR=~/app/dotfiles
 
 mkdir -p ~/.config/nvim/
-touch ~/.config/nvim/dein.toml ~/.config/nvim/init.vim ~/.config/nvim/ddc.vim
+touch ~/.config/nvim/dein.toml ~/.config/nvim/init.vim
 
 ln -sf $DOT_DIR/vim/dein.toml ~/.config/nvim/dein.toml
 ln -sf $DOT_DIR/vim/init.vim ~/.config/nvim/init.vim
-ln -sf $DOT_DIR/vim/ddc.vim ~/.config/nvim/ddc.vim
