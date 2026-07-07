@@ -5,19 +5,11 @@ brew install neovim
 brew install fzf
 brew install ripgrep
 brew install gh
-brew install pyenv
 
 mkdir ~/app && cd ~/app
 git clone https://github.com/mYahagi/dotfiles.git
 
 ./dotfiles/install.sh
-
-# その時の最新のPythonを入れる
-pyenv install --list
-pyenv install 3.xx.x
-
-# install Deno (For ddc.vim)
-curl -fsSL https://deno.land/install.sh | sh
 
 # install dein
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Shougo/dein-installer.vim/master/installer.sh)"
@@ -39,8 +31,8 @@ sh installer.sh
 #### fzf/ripgrep
 |  コマンド  |  動作  |
 | ---- | ---- |
-|  fz  |  ファイル名であいまい検索  |
-|  rg  |  全検索  |
+|  Space+f  |  ファイル名であいまい検索  |
+|  Space+g  |  全検索  |
 
 ---
 
